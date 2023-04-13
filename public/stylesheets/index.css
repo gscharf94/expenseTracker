@@ -1,0 +1,189 @@
+html {
+  font-family: "Fira Mono";
+  background-color: lightgray;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  border: none;
+  width: 50%;
+/*  margin: auto;*/
+  font-weight:bold;
+  font-size: 2.5ch;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+input {
+/*  margin: auto;*/
+}
+
+label {
+  text-align: right;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.dateInput {
+  font-size: 2ch;
+}
+
+.notesInput {
+  font-size: 2ch;
+
+}
+
+.dollarInput {
+  font-size: 2ch;
+  width: 40%;
+}
+
+#uploadFile {
+  color: white;
+  font-size: 2ch;
+  max-width: 75%;
+}
+
+#balanceHeader {
+  display: grid;
+  max-width: 40%;
+  margin-top: 5px;
+  margin-left:15px;
+}
+
+#balanceTitle {
+  grid-row: 1;
+  grid-column: 1;
+  font-size: 3ch;
+  margin: 0px;
+}
+
+#balance {
+  grid-row: 2;
+  grid-column: 1;
+  font-size: 2.5ch;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+#historyLink {
+  color: blue;
+  margin-left: 15;
+  cursor: pointer;
+}
+
+#expenseContainer {
+  display: grid;
+  background-color: #ff7c7c;
+  padding-left: 10px;
+}
+
+#expenseContainer h2 {
+
+}
+
+
+#expenseContainer form {
+  display: grid;
+  max-width: 40%;
+  grid-row-gap: 10px;
+}
+
+#expenseContainer form input {
+
+}
+
+#expenseContainer form label {
+}
+
+#expenseValueLabel {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#expenseValue {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#expenseDate {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+#expenseDateLabel {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+#expenseNotes {
+  grid-row: 4;
+  grid-column: 2;
+  width: 300px;
+}
+
+#expenseNotesLabel {
+  grid-row: 4;
+  grid-column: 1;
+}
+
+#uploadFile {
+  grid-row: 2;
+  grid-column: 2;
+  max-width: 300px !important;
+}
+
+#expenseSubmit {
+  grid-row: 5;
+  grid-column: 2;
+/*  grid-column: 1 / 2;*/
+}
+
+#depositContainer {
+  display: grid;
+  background-color: #7cd27c;
+  padding-left: 10px;
+}
+
+#depositContainer form {
+  display: grid;
+  max-width: 40%;
+  grid-row-gap: 10px;
+}
+
+#depositValue {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+#depositValueLabel {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#depositDate {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#depositDateLabel {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+#depositNotes {
+  grid-row: 3;
+  grid-column: 2;
+  width: 300px;
+}
+
+#depositNotesLabel {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+#depositSubmit {
+  grid-row: 4;
+  grid-column: 2;
+}

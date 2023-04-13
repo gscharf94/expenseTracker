@@ -1,0 +1,34 @@
+html
+  head
+    title Expenses - Fiber 1
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fira+Mono")
+    link(rel="stylesheet", href="/stylesheets/index.css")
+  body
+    div#balanceHeader
+      h1#balanceTitle Balance
+      h1#balance #{balance}
+    h3#historyLink View History
+    div#expenseContainer
+      h2 Submit Expense
+      form(action="/upload" method="POST" enctype="multipart/form-data")
+        input(type="number" min="0.01" step="0.01" name="expenseValue")#expenseValue.dollarInput
+        label(for="expenseValue")#expenseValueLabel $
+        input(type="file" name="image")#uploadFile
+        input(type="date" name="expenseDate")#expenseDate.dateInput
+        label(for="expenseDate")#expenseDateLabel Date
+        input(type="text" name="expenseNotes")#expenseNotes.notesInput
+        label(for="expenseNotes")#expenseNotesLabel Notes
+        button(type="submit")#expenseSubmit Submit
+    div#depositContainer
+      h2 Submit Deposit
+      form(action="/deposit" method="POST" enctype="multipart/form-data")
+        input(type="number", min="0.01" step="0.01" name="depositValue")#depositValue.dollarInput
+        label(for="depositValue")#depositValueLabel $
+        input(type="date" name="depositDate")#depositDate.dateInput
+        label(for="depositDate")#depositDateLabel Date
+        input(type="text" name="depositNotes")#depositNotes.notesInput
+        label(for="depositNotes")#depositNotesLabel Notes
+        button(type="submit")#depositSubmit Submit
+
+  script(src="/scripts/index.js")
