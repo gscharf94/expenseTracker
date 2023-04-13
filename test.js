@@ -17,6 +17,6 @@ app.use('/', indexRouter);
 app.use('/upload', uploadRouter);
 app.use('/deposit', depositRouter);
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
 	console.log(`listening on port: localhost:${port}`);
 });
