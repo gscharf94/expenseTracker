@@ -4,8 +4,8 @@ const {parseFile} = require('../helperFunctions.js');
 
 
 router.get('/', (req, res) => {
-  console.log(parseFile());
-  res.render('history', {test: "hello world"});
+  const data = parseFile();
+  res.render('history', {data: data});
 });
 
 module.exports = router;

@@ -5,8 +5,7 @@ html
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fira+Mono")
     link(rel="stylesheet", href="/stylesheets/history.css")
   body
-    h1 Hello World
-    h2 #{test}
-
+    each val in data
+      li= val
 
     script(src="/scripts/history.js")
