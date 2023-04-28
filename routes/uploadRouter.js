@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const exec = require('child_process');
+const {exec} = require('child_process');
 const {addExpense, getNextId} = require('../helperFunctions.js');
 
 router.post('/', (req, res) => {
