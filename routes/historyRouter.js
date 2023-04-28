@@ -3,7 +3,7 @@ const router = express.Router();
 const {parseFile} = require('../helperFunctions.js');
 
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   console.log(parseFile());
   res.render('history', {test: "hello world"});
 });
