@@ -8,7 +8,7 @@ html
     div#balanceHeader
       h1#balanceTitle Balance
       h1#balance #{balance}
-    h3#historyLink View History
+    a(href="/history")#historyLink View History
     div#expenseContainer
       h2 Submit Expense
       form(action="/upload" method="POST" enctype="multipart/form-data")

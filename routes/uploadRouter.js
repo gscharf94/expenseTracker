@@ -14,7 +14,13 @@ router.post('/', (req, res) => {
   addExpense(expenseValue, expenseDate, expenseNotes);
   if (req.files) {
     const {image} = req.files;
-    image.mv(`${process.cwd()}/upload/${nextId}${image.name.slice(image.name.lastIndexOf('.'),)}`);
+    const imageName = `${process.cwd()}/upload/${nextId}${image.name.slice(image.name.lastIndexOf('.'),)}`;
+    image.mv(imageName, (err) => {
+      if (err) {
+        return res.status(500).send(err);
+      }
+     exec(`convert ${imageName} -resize 25% -quality 5% ${imageName}`); 
+    });
   }
 	res.redirect('back');
 });
