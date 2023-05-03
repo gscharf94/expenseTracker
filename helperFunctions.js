@@ -18,7 +18,7 @@ function addExpense(value, expenseDate, notes) {
 
 function addDeposit(value, depositDate, notes) {
   let id = getNextId();
-  let output = `${id}, deposit, ${value}, ${formatDateToDatabase(expenseDate)}, ${removeCommas(notes)},\n`;
+  let output = `${id}, deposit, ${value}, ${formatDateToDatabase(depositDate)}, ${removeCommas(notes)},\n`;
   fs.appendFileSync(logFilePath, output);
 }
 
