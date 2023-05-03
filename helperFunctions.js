@@ -5,15 +5,20 @@ function removeCommas(str) {
   return str.replace(/,/g, "");
 }
 
+function formatDateToDatabase(expenseDate) {
+  let [year, month, day] = expenseDate.split("-");
+  return `${month}/${day}/${year.slice(-2,)}`;
+}
+
 function addExpense(value, expenseDate, notes) {
   let id = getNextId();
-  let output = `${id}, expense, ${value}, ${expenseDate}, ${removeCommas(notes)},\n`;
+  let output = `${id}, expense, ${value}, ${formatDateToDatabase(expenseDate)}, ${removeCommas(notes)},\n`;
   fs.appendFileSync(logFilePath, output);
 }
 
 function addDeposit(value, depositDate, notes) {
   let id = getNextId();
-  let output = `${id}, deposit, ${value}, ${depositDate}, ${removeCommas(notes)},\n`;
+  let output = `${id}, deposit, ${value}, ${formatDateToDatabase(expenseDate)}, ${removeCommas(notes)},\n`;
   fs.appendFileSync(logFilePath, output);
 }
 
