@@ -1,3 +1,53 @@
 html {
-  background-color: pink;
+  background-color: #313131;
+  font-family: "Fira Mono";
+}
+
+th {
+  font-size: 3ch;
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#backLink {
+  font-size: 3ch;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.notes {
+  max-width: 130px;
+}
+
+th {
+  background-color: #171717;
+  color: white;
+}
+
+td {
+  background-color: whitesmoke;
+}
+
+.grayRow {
+  background-color: #dbdbdb;
+}
+
+.expenseCell {
+  color: #cc0505;
+  font-weight: bold;
+}
+
+.depositCell {
+  color: #006a00;;
+  font-weight: bold;
 }

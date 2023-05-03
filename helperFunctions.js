@@ -27,6 +27,8 @@ function parseFile() {
       dataRow.push(Number(row.split(",")[0]));
       dataRow.push(row.split(",")[1].trim());
       dataRow.push(Number(row.split(",")[2]));
+      dataRow.push(row.split(",")[3].trim());
+      dataRow.push(row.split(",")[4].trim());
       data.push(dataRow);
     }
   }

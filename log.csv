@@ -1,28 +1,500 @@
-id, type, value, date, notes,
-1, expense, 500,
-2, deposit, 1000,
-3, expense, 500,
-4, expense, 500,
-5, expense, 700,
-6, expense, 700,
-7, deposit, 150.5,
-8, expense, 700,
-9, deposit, 150.5,
-10, expense, 700,
-11, deposit, 150.5,
-12, deposit, 132,
-13, expense, 123,
-14, expense, 555,
-15, deposit, 3000,
-16, expense, 150,
-17, deposit, 1000,
-18, expense, 150,
-19, expense, 123,
-20, expense, 123, undefined, undefined,
-21, expense, 123, 2023-04-13, april 13th,
-22, expense, 123, 2023-04-13, thisisatest,
-23, expense, 123, , ,
-24, expense, 123.12, , ,
-25, expense, 11, , ,
-26, expense, 123.32, 2023-04-19, this is a note,
-27, deposit, 123.23, 2023-04-11, hello world,
+id,type,value,date,notes
+1,expense,56.7,07/18/22,Ball Mount
+2,expense,124.83,07/18/22,Gas
+3,expense,38.5,07/15/22,Fiber Glass
+4,expense,11.55,07/14/22,AAA 6PK
+5,expense,75.11,07/14/22,Gas
+6,expense,197.73,07/14/22,Measure Wheel + Marking Paint
+7,expense,125,07/05/22,Gas
+8,expense,243.33,07/06/22,Duct Tape + Insect Repellent + 10LB Seed 
+9,expense,130,07/10/22,Gas
+10,expense,4,07/13/22,Print Services
+11,expense,125,07/07/22,Gas
+12,expense,68.47,07/13/22,Hydraulic Fluid
+13,expense,22,07/13/22,Print Services
+14,expense,108.15,06/30/22,Fish Tape + Kobalt Lockback
+15,expense,232.96,07/14/22,Hotel
+16,expense,220.64,07/13/22,Hotel
+17,expense,440,07/05/22,Hotel
+18,expense,77.28,07/17/22,Hotel
+19,expense,75.07,07/16/22,Gas
+500,deposit,2500,07/19/22,Deposit
+20,expense,42.78,07/22/22,Prep Werx Def Diesel Exh
+21,expense,92.59,07/22/22,Gas
+22,expense,15,07/20/22,Gas
+23,expense,38.06,07/21/22,Ice & Gas Can
+24,expense,95.19,07/18/22,Hotel
+25,expense,19.47,07/26/22,Spring Water & Ice
+26,expense,124.08,07/26/22,Lawn Berm
+27,expense,8.54,07/26/22,Ratchet
+28,expense,185.25,07/26/22,Gravel Granite
+29,expense,140,01/01/23,Gas
+30,expense,36.94,07/26/22,Nuts Screws Washers
+31,expense,374.05,07/26/22,Hotel
+501,deposit,1500,07/30/22,Deposit
+32,expense,109,08/03/22,Hotel
+33,expense,99.4,08/04/22,Hotel
+34,expense,123.19,08/02/22,Hotel
+35,expense,25.95,08/04/22,Ice
+36,expense,14.77,08/02/22,Ice & Water
+37,expense,134.08,08/01/22,Gas
+38,expense,116.01,08/04/22,Gas
+39,expense,103.56,07/29/22,Gas
+40,expense,288.54,07/31/22,Hotel
+41,expense,205.7,08/08/22,Locksmith
+42,expense,111.89,08/08/22,Gas
+502,deposit,2000,08/09/22,Deposit
+43,expense,306.24,08/12/22,Signs MOT
+44,expense,25,08/11/22,Copies
+45,expense,100,08/12/22,Safety Vests
+46,expense,95.89,08/12/22,Gas
+47,expense,150,08/10/22,Hotel
+48,expense,100,08/10/22,Hotel
+49,expense,51.89,08/09/22,Battery / Ice / Water
+50,expense,101.12,08/10/22,Gas
+51,expense,222.47,08/10/22,Hotel
+503,deposit,1000,08/15/22,Deposit
+52,expense,118.41,01/01/23,Gas
+53,expense,15.44,08/17/22,Ice
+54,expense,316.92,08/14/22,Hotel
+55,expense,45.97,08/19/22,Ash Solid Shank & Steel Tine Leaf
+56,expense,96.29,08/18/22,Hydraulic Fluid
+57,expense,203.62,08/18/22,Measuring Wheel Knife File Set Sandpaper
+58,expense,76.15,08/18/22,Hotel
+59,expense,122.99,01/01/23,Gas
+60,expense,12.39,08/18/22,Towels
+61,expense,143.36,08/18/22,Hydraulic Fluid
+62,expense,71.68,08/25/22,Hydraulic Fluid
+63,expense,99.86,08/25/22,Gas
+64,expense,138.19,08/26/22,Gas
+65,expense,150,08/24/22,Eliete Casa Sarasota
+66,expense,77.01,08/15/22,Diesel Exhaust Fluid
+67,expense,100,08/14/22,Gas
+504,deposit,1500,08/29/22,Deposit
+68,expense,153.29,09/06/22,Vermeer Parts
+69,expense,95.28,01/01/23,Gas
+70,expense,179.74,09/06/22,Hydraulic Oil & Exhaust Fluid
+71,expense,106.74,01/01/23,Gas
+72,expense,16.35,01/01/23,Ice
+73,expense,137.21,08/31/22,Spray Paint & PVC Cutter
+74,expense,100,08/30/22,Gas
+75,expense,116.09,08/29/22,Printing
+76,expense,18.16,08/30/22,2 Gal Sprayer
+77,expense,10.97,08/31/22,Ice
+78,expense,9.05,08/29/22,Ice
+79,expense,215.8,08/30/22,60lb Sakpete Weather Patch
+80,expense,164.7,08/30/22,Rent Concrete Saw
+81,expense,98,09/06/22,Hotel
+505,deposit,1500,09/07/22,Deposit
+82,expense,99.93,09/12/22,Gas
+83,expense,152.85,01/01/23,Hard Hats & Tarp & LED Trail
+84,expense,113,09/09/22,Hotel
+85,expense,75.5,09/09/22,Printing Services
+86,expense,203.3,09/08/22,Trailer Tire
+87,expense,319.93,09/08/22,Tools
+88,expense,223.89,09/08/22,Wood Trailer
+89,expense,13.33,09/08/22,Saw Blade
+90,expense,100,09/09/22,Gas
+91,expense,42.16,09/09/22,Printing Services
+92,expense,209.02,09/08/22,Vermeer Oil Filter
+506,deposit,2000,09/18/22,Deposit
+507,deposit,2000,09/19/22,Deposit
+93,expense,100,09/12/22,Hotel
+94,expense,86,09/20/22,Hotel
+95,expense,100,01/01/23,Gas
+96,expense,99,09/22/22,Hotel
+97,expense,144,09/26/22,Hotel
+98,expense,80,09/14/22,Hotel
+99,expense,122.87,09/29/22,UPS Shipping
+100,expense,49.54,09/27/22,Gas
+101,expense,88.63,09/26/22,Printing Services
+102,expense,876.13,09/27/22,Tires
+103,expense,117.1,01/01/23,Gas
+104,expense,30.29,09/26/22,Gas
+105,expense,12.82,09/13/22,Brass Key & Ice
+106,expense,132.9,09/16/22,Gas
+107,expense,300,09/16/22,Tires
+108,expense,71.31,09/13/22,Gas
+109,expense,13.64,09/14/22,Printing Services
+110,expense,11.91,09/15/22,Printing Services
+111,expense,223.72,09/13/22,Oil Change
+112,expense,89.91,09/18/22,Gas
+113,expense,57.6,09/16/22,Printing Services
+114,expense,72.08,09/18/22,Gas
+115,expense,109.66,09/22/22,Gas
+116,expense,200,09/18/22,Gas
+117,expense,42.27,09/19/22,Ratchet Strap
+118,expense,19.24,09/18/22,Tellico 22 In Wiper
+119,expense,91.56,09/18/22,Gas
+120,expense,100,09/21/22,Gas
+121,expense,100,09/19/22,Gas
+122,expense,16.26,09/21/22,Gas
+123,expense,125,09/20/22,Gas
+124,expense,101.93,09/15/22,Gas
+125,expense,11.62,09/22/22,Ice & Water
+126,expense,99.41,09/25/22,Gas
+127,expense,112.34,10/04/22,Gas
+128,expense,214,10/04/22,Hotel
+129,expense,13.49,10/05/22,UPS Shipping
+130,expense,112.95,10/06/22,Gas
+131,expense,109,10/06/22,Hotel
+132,expense,100,09/24/22,Payment for Trench (US 301 Future)
+508,deposit,2000,10/06/22,Deposit
+133,expense,150.63,10/12/22,Marking Equipment
+134,expense,111.56,10/10/22,Gas
+135,expense,56.52,10/14/22,Printing Services
+136,expense,119.34,10/12/22,Vermeer Parts
+137,expense,63.12,10/11/22,20ft Booster Cables
+138,expense,8.47,10/14/22,USPS Shipping
+139,expense,124.9,10/12/22,Gas
+140,expense,26.61,10/10/22,Gas
+141,expense,72.15,10/13/22,Gas
+142,expense,36.24,10/14/22,Printing Services
+143,expense,111,10/12/22,Hotel
+144,expense,193,10/10/22,Hotel
+509,deposit,1500,10/18/22,Deposit
+145,expense,114.28,10/07/22,MOT Rental
+146,expense,7.25,10/20/22,Hose Clamps
+147,expense,63.08,10/20/22,Antifreeze / Coolant
+148,expense,125,10/21/22,Gas
+149,expense,100,10/19/22,Gas
+150,expense,89.07,10/20/22,Gas
+151,expense,10.68,10/20/22,Heater Hose Connection
+152,expense,109,10/31/22,Hotel
+153,expense,90,10/24/22,Hotel
+154,expense,370.92,10/25/22,Hotel
+155,expense,50,11/01/22,Gas
+156,expense,29.31,10/31/22,Synthetic Oil
+157,expense,150.17,11/01/22,Contractor Bags & Shovel
+158,expense,143.38,10/26/22,Turf Builder
+159,expense,18.08,10/26/22,Savealot
+160,expense,129.91,10/25/22,Blue Def / Shovel / Rake
+161,expense,99.62,10/27/22,Gas
+162,expense,99.76,10/28/22,Gas
+163,expense,74.89,10/24/22,Hydraulic Oil
+164,expense,125,01/01/23,Gas
+165,expense,117.16,11/02/22,Gas
+166,expense,120.06,10/31/22,Gas
+167,expense,68,11/01/22,Hotel
+168,expense,100,10/31/22,Gas
+169,expense,93,11/02/22,Hotel
+510,deposit,2000,11/11/22,Deposit
+170,expense,93,11/02/22,Hotel
+171,expense,26.55,11/03/22,Gas
+172,expense,37.64,11/08/22,Gas
+173,expense,100,11/09/22,Gas
+174,expense,108.78,11/03/22,Hotel
+175,expense,105.56,11/02/22,Hotel
+176,expense,104,11/07/22,Hotel
+177,expense,1677.06,11/08/22,Auto Repair
+178,expense,137.64,11/09/22,Hotel
+179,expense,286.38,11/09/22,Hotel
+511,deposit,2000,11/04/22,Deposit
+180,expense,98.97,11/15/22,Printing Services
+181,expense,37.64,11/18/22,Gas
+182,expense,10,11/16/22,Ice & Water
+183,expense,9.58,11/15/22,Ice & Water
+184,expense,54.54,11/15/22,3x Orc 2.5GAL
+185,expense,80.76,11/15/22,Hydraulic Oil
+186,expense,29.92,11/15/22,Hard Hat
+187,expense,76.1,11/16/22,Gas
+188,expense,64.39,11/15/22,Bump Cap & Safety Vest
+189,expense,100,01/01/23,Gas
+190,expense,67.28,11/15/22,White Paint
+191,expense,116,11/15/22,Hotel
+192,expense,150,01/01/23,Hotel
+193,expense,258,11/16/22,Hotel
+512,deposit,2000,11/20/22,Deposit
+194,expense,248,11/21/22,Hotel
+195,expense,163,11/25/22,Concrete Saw
+196,expense,70.1,11/23/22,Gas
+197,expense,48,11/22/22,Coppertop
+198,expense,72.76,11/18/22,Gas
+199,expense,50,11/22/22,Gas
+200,expense,130.09,11/23/22,Blacktop Patch
+201,expense,110.15,11/23/22,2 Gal Sprayer & Fish Tape
+513,deposit,2000,12/01/22,Deposit
+202,expense,163.48,11/30/22,Concrete Saw
+203,expense,27.33,12/02/22,Printing Services
+204,expense,122.15,12/01/22,Turf Rake Broom Boards
+205,expense,100,12/02/22,Gas
+206,expense,23.29,11/30/22,Water & Ice
+207,expense,185.86,12/01/22,Blacktop Patch
+208,expense,561.03,11/30/22,?
+209,expense,138,11/30/22,Hotel
+210,expense,153,12/01/22,Hotel
+211,expense,200.57,11/23/22,Concrete Saw
+212,expense,55.66,11/30/22,Hook
+213,expense,125,12/05/22,Hotel
+214,expense,123.05,12/05/22,Concrete Saw
+215,expense,41.92,12/05/22,Pink & White Paint
+514,deposit,1000,12/06/22,Deposit
+216,expense,228,11/28/22,Hotel
+217,expense,99.69,11/28/22,Gas
+218,expense,178.37,11/28/22,Advanced Auto Parts
+219,expense,84.7,11/28/22,Barry’s Trailers
+220,expense,14.35,11/28/22,Home Depot
+221,expense,104.86,12/06/22,Concrete Saw
+222,expense,308.22,12/12/22,Battery / Paint / Solder
+223,expense,170.69,12/12/22,Sheating Ply
+224,expense,100,12/12/22,Gas
+225,expense,100,12/08/22,Gas
+226,expense,119.22,12/06/22,Gas
+227,expense,36.36,12/06/22,Fram Ant 1GL
+228,expense,100,12/06/22,Gas
+229,expense,129.94,12/12/22,Hotel
+515,deposit,1000,12/13/22,Deposit
+516,deposit,1000,12/15/22,Deposit
+230,expense,93.99,12/13/22,Sod
+231,expense,163.84,12/13/22,Hotel
+232,expense,13,12/14/22,Printing Services
+233,expense,546.05,12/12/22,Hotel
+234,expense,80,12/06/22,Sod
+235,expense,80,12/07/22,Sod
+236,expense,99.88,12/14/22,Gas
+237,expense,218,12/14/22,Signs and Vests
+238,expense,80.28,12/16/22,Gas
+517,deposit,1000,12/20/22,Deposit
+239,expense,123.04,12/20/22,2.5T Jack and Stands
+240,expense,187.92,12/21/22,Plywood & Blue Tarp
+241,expense,85.71,12/19/22,Gas
+242,expense,120,12/21/22,Gas
+243,expense,72.73,12/19/22,Blue Def
+244,expense,64.57,12/20/22,Printing Services
+245,expense,124.63,12/19/22,Gas
+246,expense,107,12/19/22,Fuel Filter
+247,expense,61.25,12/19/22,Fuel Filter & Wrench
+248,expense,256.45,12/19/22,Hotel
+249,expense,298.68,12/20/22,Hotel
+250,expense,165.85,12/22/22,Gas
+251,expense,202.23,12/22/22,Limestone Rock
+252,expense,125,12/19/22,Gas
+253,expense,31.57,12/22/22,Sod
+518,deposit,2000,12/23/22,Deposit
+519,deposit,1000,12/30/22,Deposit
+254,expense,86.37,12/30/22,Gas
+255,expense,10.19,12/30/22,Ice
+256,expense,6.99,12/30/22,Water
+257,expense,110.45,12/27/22,Gas
+258,expense,25.67,12/28/22,Filter Pliers
+259,expense,100,12/29/22,Gas
+260,expense,113.41,12/28/22,Gas
+261,expense,78.09,12/28/22,Napagold Fuel & Tub o Towels
+262,expense,68.44,12/27/22,Antifreeze
+263,expense,85.53,12/28/22,Duralist Ratchet & Valuecraft 8 Gauge
+264,expense,144,12/28/22,PTFE Tape & Husty 50ct Bags 
+265,expense,70.4,12/30/22,Sod Piece & Knife
+266,expense,544.37,01/01/23,Hotel
+267,expense,101.7,12/27/22,Hotel
+520,deposit,1000,01/03/23,
+521,deposit,1500,01/05/23,
+522,deposit,1000,01/05/23,
+268,expense,485.26,01/03/23,Hotel
+269,expense,100,01/01/23,Mechanic Ditch Witch
+270,expense,80,01/01/23,Alexandre Donzelli
+271,expense,117.55,01/06/23,Trash Pump / Discharge Hose / Suction Hose
+272,expense,81.29,01/06/23,Power Cutter
+273,expense,84.48,01/05/23,PVC Cutter & Lawn Bermuda
+274,expense,13.74,01/05/23,PVC Cutter
+275,expense,42.33,01/06/23,Long Nose / Alpha Rosin / Utility Knife
+276,expense,135,01/09/23,Hotel
+277,expense,1217.04,01/09/23,Hotel
+278,expense,117.55,01/10/23,Trump Pump / Discharge Hose / Suction Hose
+279,expense,97.16,01/01/23,Gas
+280,expense,21.83,01/09/23,Gas
+281,expense,677.54,01/09/23,Hotel
+282,expense,200,01/01/23,Mechanic Leesburg
+283,expense,100,01/10/23,Gas
+284,expense,435.38,01/11/23,Extension Ladder / Bungee / Ratchet Strap
+285,expense,81.28,01/05/23,Power Cutter
+286,expense,6,01/11/23,Water
+287,expense,33.96,01/11/23,All Purpose
+289,expense,7.77,01/12/23,Gas
+290,expense,100,01/12/23,Gas
+291,expense,145.49,01/13/23,Tire Installation
+292,expense,255.03,01/05/23,Sod Pallet
+293,expense,120,01/05/23,Gas
+294,expense,26.86,01/04/23,Gas
+295,expense,8.99,01/05/23,Ice & Water
+296,expense,117.7,01/06/23,Bulk Limestone
+297,expense,120,01/05/23,Gas
+523,deposit,200,01/16/23,Deposit
+524,deposit,300,01/06/23,Deposit
+525,deposit,500,01/06/23,Deposit
+298,expense,77.53,01/24/23,Concrete Saw
+299,expense,1112.28,01/23/23,Hotel
+300,expense,25.67,01/24/23,Garden Sprayer
+301,expense,80.22,01/24/23,Shovel & Fiberglass
+302,expense,20,01/01/23,Gas
+303,expense,27.79,01/19/23,Bolts & Catalyst
+304,expense,85.6,01/21/23,Gas
+305,expense,100.97,01/23/23,Gas
+306,expense,120,01/01/23,Gas
+307,expense,77.53,01/24/23,Gas
+308,expense,117.55,01/23/23,Trump Pump / Discharge Hose / Suction Hose
+309,expense,129.65,01/25/23,Blue Tarp & Blacktop
+310,expense,38.48,01/25/23,Tarp
+311,expense,117.7,01/26/23,Bulk Limestone
+312,expense,50,01/01/23,Oil Change
+313,expense,32.37,01/27/23,Gas
+314,expense,100,01/31/23,Gas
+315,expense,100,01/31/23,Gas
+316,expense,206.62,01/31/23,Motel
+317,expense,434.89,02/01/23,Hotel
+318,expense,434.89,02/01/23,Hotel
+319,expense,11.48,02/01/23,Water & Ice
+320,expense,92.7,02/02/23,Gas
+321,expense,85.47,02/03/23,Gas
+322,expense,65.85,02/03/23,Gas
+323,expense,765.09,02/03/23,Forestry Resources
+324,expense,121.95,02/08/23,Sod
+325,expense,11.48,02/07/23,Water & Ice
+326,expense,100,02/07/23,Gas
+327,expense,70.62,02/07/23,Bolts
+328,expense,21.39,02/07/23,Rake
+329,expense,41.31,02/07/23,Bolts
+330,expense,380,01/01/23,Helper Tadeu Restoration
+331,expense,254.2,02/08/23,Sod
+332,expense,80.19,02/08/23,Wood Handle & Measuring Wheel
+333,expense,244.81,02/07/23,Hotel
+334,expense,158.94,02/06/23,Hotel
+335,expense,155.67,01/01/23,Hotel
+336,expense,704.1,02/07/23,Sod
+337,expense,100,02/09/23,Gas
+338,expense,100,02/09/23,Gas
+339,expense,1217.04,01/09/23,Hotel
+340,expense,949.57,01/17/23,Hotel
+341,expense,20.2,01/17/23,Gas
+342,expense,99.64,01/17/23,Gas
+343,expense,160,01/16/23,Gas
+344,expense,42.73,01/01/23,Tarp
+345,expense,12.04,01/17/23,Gas
+346,expense,117.7,01/18/23,Bulk Limestone
+347,expense,91.29,01/16/23,Hotel
+348,expense,65.26,01/16/23,Gas
+349,expense,100,01/16/23,Gas
+350,expense,27.79,01/19/23,Bolts
+527,deposit,2000,02/07/23,Deposit
+528,deposit,2000,02/02/23,Deposit
+529,deposit,500,01/11/23,Deposit
+530,deposit,500,01/12/23,Deposit
+531,deposit,1500,01/09/23,Deposit
+532,deposit,500,01/18/23,Deposit
+533,deposit,200,01/18/23,Deposit
+534,deposit,300,01/16/23,Deposit
+535,deposit,1500,01/23/23,Deposit
+536,deposit,1000,02/13/23,Deposit
+537,deposit,1000,02/20/23,Deposit
+351,expense,221.35,02/22/23,PVC Pipe & Paint & Bags
+352,expense,313.94,02/22/23,Drill & Impact Driving Kit
+353,expense,120,02/21/23,Gas
+354,expense,147.03,02/21/23,Strap & Gas
+355,expense,55.87,02/20/23,Lightning Cable & Pin Clips
+356,expense,120,02/22/23,Gas
+357,expense,99.87,02/13/23,Gas
+358,expense,142.55,02/13/23,Gas
+359,expense,51.2,02/20/23,Blade Fuses & Bulbs
+360,expense,100,02/20/23,Gas
+361,expense,132.25,02/13/23,Sod
+362,expense,120,02/14/23,Gas
+363,expense,61.5,02/14/23,Weathershield & Ratchet Strap
+364,expense,72.29,02/20/23,Performance Tools & Electrical Tape
+365,expense,83.2,02/20/23,Gas
+366,expense,98.17,02/16/23,Gas
+367,expense,135.85,02/22/23,Trailer World
+368,expense,137,02/20/23,Hotel
+369,expense,143,02/13/23,Hotel
+370,expense,87.72,02/23/23,Tester Pc & Hydraulic Fluid
+371,expense,106.68,02/23/23,Blue Tarps
+372,expense,174.32,02/23/23,Tall Fescue Mix Bags
+373,expense,72.7,02/23/23,Gas
+374,expense,39.54,02/23/23,Gas
+375,expense,37.79,02/23/23,Wheat Straw Bale
+538,deposit,1100,02/21/23,Deposit
+539,deposit,1000,02/22/23,Deposit
+540,deposit,1000,02/24/23,Deposit
+376,expense,50,02/23/23,Gas
+377,expense,100,02/28/23,Water Locator Bribe
+378,expense,243.5,01/01/23,Drain Spade
+379,expense,70.87,02/24/23,Booster CBL
+380,expense,40,02/25/23,Gas
+381,expense,50,02/27/23,Gas
+382,expense,47.27,02/27/23,Gas
+383,expense,40.14,02/26/23,Gas
+384,expense,50.96,03/01/23,Gas
+385,expense,35.04,03/01/23,Gas
+386,expense,41.44,02/25/23,Gas
+387,expense,240.13,02/28/23,Safety Vests / Steel Tamper / Knife
+388,expense,50.71,02/27/23,Gas
+389,expense,159.63,03/01/23,Triball & Hitch Pin
+390,expense,92.61,03/04/23,Fish Tape 
+391,expense,277.86,03/02/23,PVC Cutter / Wrench Socket / White Paint / PVC Pipe
+392,expense,160.5,03/02/23,Flight
+393,expense,360,01/01/23,Dado Helper Orlando
+394,expense,149,03/10/23,Flight
+395,expense,307.45,03/09/23,Missile Whip
+396,expense,60.85,03/10/23,Gas
+397,expense,31.56,03/10/23,Heavy Duty Greaser & Wire Rope
+398,expense,68.97,03/10/23,Gas
+399,expense,142.55,03/08/23,Sod
+400,expense,100.52,03/07/23,Gas
+401,expense,8.19,03/08/23,Ice Bag
+402,expense,190.4,03/08/23,Turf Builder
+403,expense,23.77,03/08/23,Gas
+404,expense,208.68,03/08/23,Sod
+405,expense,47.93,03/07/23,Gas
+406,expense,36.54,03/09/23,Gas
+407,expense,100,03/08/23,Gas
+408,expense,366.28,03/11/23,Broom / Triball / Pintle 
+409,expense,190.09,03/09/23,Oil Change
+410,expense,75,03/11/23,Pump Fee
+411,expense,44.36,03/11/23,Gas
+412,expense,25.97,03/12/23,Hitch Lock
+413,expense,70.99,03/10/23,Uber
+414,expense,198.83,03/13/23,Ditch Witch
+415,expense,53,03/13/23,Trailer Repair
+416,expense,34.53,03/13/23,Gas
+417,expense,123.36,03/13/23,Battery
+418,expense,130.24,03/14/23,Gas
+541,deposit,1500,03/13/23,Deposit
+542,deposit,2500,03/09/23,Deposit
+419,expense,662.68,03/28/23,Safelit Autoglass
+420,expense,77.51,03/15/23,Gas
+421,expense,257.48,03/21/23,Steel Fish Tape & Knife
+422,expense,93.63,03/23/23,Gas
+423,expense,79.4,03/18/23,Gas
+424,expense,70.75,03/19/23,Gas
+425,expense,45.66,03/23/23,Multimeter
+426,expense,142.15,03/18/23,Triple Act Seed
+427,expense,65.99,03/22/23,Gas
+428,expense,61.29,03/28/23,Antifreeze & Galturbods
+429,expense,5.95,03/29/23,Downy
+430,expense,136.85,03/30/23,Rock & Sod
+431,expense,246.25,03/23/23,Pulling Grip – Ditch Witch
+432,expense,131.72,04/03/23,Contractors Bags /  Mulch
+433,expense,63.87,04/03/23,Gas
+434,expense,98.52,04/04/23,Gas
+435,expense,71.2,04/04/23,Gas
+436,expense,74.17,04/06/23,Torch Kit
+437,expense,20,04/06/23,Gas
+438,expense,75,04/07/23,Dump Fee
+439,expense,61.03,04/07/23,Gas
+440,expense,20,04/07/23,Gas
+441,expense,33.34,04/07/23,Gas
+442,expense,305.63,04/06/23,Safelit AutoGlass
+443,expense,68.73,04/07/23,Gas
+444,expense,151.48,04/10/23,Straw Bale & Grass Seed
+445,expense,70,04/11/23,Gas
+446,expense,33.51,04/11/23,Gas
+447,expense,400,01/01/23,Jose Mendoza
+543,deposit,2000,03/15/23,Deposit
+544,deposit,1000,04/01/23,Deposit
+545,deposit,1000,04/01/23,Deposit
+448,expense,1000,03/01/23,Paid Dan
+449,expense,1000,03/01/23,Cleanup
+450,expense,1000,04/01/23,Paid Dan
+451,expense,860,04/01/23,Cleanup
+452,expense,1000,03/15/23,Paid Dan
+546,deposit,2000,04/12/23,Deposit
+547,deposit,1500,03/07/23,Deposit
+548, expense, 94.90, 2023-04-14, hacksaw and blades,

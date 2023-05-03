@@ -5,7 +5,9 @@ html
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fira+Mono")
     link(rel="stylesheet", href="/stylesheets/history.css")
   body
-    each val in data
-      li= val
+    a(href="../" id="backLink") <- Go Back
+    table#mainTable
 
+    script.
+      DATA_JSON="#{data}"
     script(src="/scripts/history.js")
