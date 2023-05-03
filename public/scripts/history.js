@@ -59,7 +59,6 @@ function populateTable(data) {
     html += `
       <tr>
         <td> ${id} </td>
-        <td> ${itemType} </td>
         <td> ${itemDate} </td>
         <td class="${(itemType == "expense")?"expenseCell":"depositCell"}"> ${(itemType == "expense")?"-":""}${formatCurrency(value)} </td>
         <td class="notes">${notes}</td>
@@ -69,7 +68,6 @@ function populateTable(data) {
     html += `
       <tr>
         <td class="grayRow"> ${id} </td>
-        <td class="grayRow"> ${itemType} </td>
         <td class="grayRow"> ${itemDate} </td>
         <td class="grayRow ${(itemType=="expense")?"expenseCell":"depositCell"}"> ${(itemType == "expense")?"-":""}${formatCurrency(value)} </td>
         <td class="notes grayRow">${notes}</td>
