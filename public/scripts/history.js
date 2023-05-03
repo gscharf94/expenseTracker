@@ -42,7 +42,6 @@ function populateTable(data) {
   let html = `
     <tr>
       <th> # </th>
-      <th> type </th>
       <th> date </th>
       <th> value </th>
       <th> notes </th>
