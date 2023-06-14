@@ -1,0 +1,5 @@
+id,type,value,date,notes,imageType
+1, expense, 150, 06/14/23, png test,png,
+2, expense, 250, 06/15/23, jpeg test,jpeg,
+3, deposit, 1500, 06/15/23, testing,
+4, expense, 1000, 05/29/23, noimage,none,

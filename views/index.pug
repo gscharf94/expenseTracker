@@ -8,7 +8,7 @@ html
     div#balanceHeader
       h1#balanceTitle Balance
       h1#balance #{balance}
-    a(href="/history")#historyLink View History
+    a(href=`/history/${user}`)#historyLink View History
     div#expenseContainer
       h2 Submit Expense
       form(action="/upload" method="POST" enctype="multipart/form-data")
@@ -20,6 +20,7 @@ html
         input(type="text" name="expenseNotes")#expenseNotes.notesInput
         label(for="expenseNotes")#expenseNotesLabel Notes
         button(type="submit")#expenseSubmit Submit
+        input(id="employee" name="employee").hide
     div#depositContainer
       h2 Submit Deposit
       form(action="/deposit" method="POST" enctype="multipart/form-data")
@@ -31,4 +32,6 @@ html
         label(for="depositNotes")#depositNotesLabel Notes
         button(type="submit")#depositSubmit Submit
 
+  script.
+    user="#{user}"
   script(src="/scripts/index.js")

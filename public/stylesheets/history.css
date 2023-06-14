@@ -3,6 +3,11 @@ html {
   font-family: "Fira Mono";
 }
 
+.imageLink {
+  color: blue;
+  font-size: 2.3ch;
+}
+
 th {
   font-size: 3ch;
   border: 1px solid black;
@@ -48,6 +53,7 @@ td {
 }
 
 .depositCell {
-  color: #006a00;;
+  color: #006a00;
+  ;
   font-weight: bold;
 }

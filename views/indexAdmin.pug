@@ -1,0 +1,30 @@
+html
+  head
+    title Expenses - Fiber 1 ADMIN
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fira+Mono")
+    link(rel="stylesheet", href="/stylesheets/indexAdmin.css")
+  body
+    div#balanceHeaders
+      for balance, user in sums
+        div.balanceHeaderContainer
+          h1.employeeNameHeader #{user}
+          h1.employeeBalanceHeader #{balance}
+          a(href=`../../historyAdmin/${user}`) View History
+        
+    div#depositContainer
+      h2 Submit Deposit
+      form(action="/deposit" method="post" enctype="multipart/form-data")
+        select(id="selectEmployee" name="selectEmployee")
+          for balance, user in sums
+            option.userOption #{user}
+        label(for="selectEmployee")#selectEmployeeLabel Employee
+        input(type="number", min="0.01" step="0.01" name="depositValue")#depositValue.dollarInput
+        label(for="depositValue")#depositValueLabel $
+        input(type="date" name="depositDate")#depositDate.dateInput
+        label(for="depositDate")#depositDateLabel Date
+        input(type="text" name="depositNotes")#depositNotes.notesInput
+        label(for="depositNotes")#depositNotesLabel Notes
+        button(type="submit")#depositSubmit Submit
+
+  script(src="/scripts/indexAdmin.js")

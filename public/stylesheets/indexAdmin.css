@@ -135,11 +135,42 @@ label {
   /*  grid-column: 1 / 2;*/
 }
 
+.balanceHeaderContainer {
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+.employeeNameHeader {
+  margin: auto;
+  text-align: center;
+}
+
+.employeeBalanceHeader {
+  margin: auto;
+  text-align: center;
+}
+
+.balanceHeaderContainer a {
+  display: table;
+  margin: auto;
+  font-size: 3ch;
+  color: blue;
+}
+
 #depositContainer {
-  /* display: grid; */
-  display: none;
+  display: grid;
   background-color: #7cd27c;
   padding-left: 10px;
+  margin: auto;
+  width: 100%;
+}
+
+body {
+  margin-left: 0px;
+}
+
+select {
+  width: 90%;
 }
 
 #depositContainer form {
@@ -149,41 +180,48 @@ label {
 }
 
 #depositValue {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 2;
 }
 
 #depositValueLabel {
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 1;
 }
 
 #depositDate {
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 2;
 }
 
 #depositDateLabel {
-  grid-row: 2;
+  grid-row: 3;
   grid-column: 1;
 }
 
 #depositNotes {
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 2;
-  width: 300px;
+  width: 270px;
 }
 
 #depositNotesLabel {
-  grid-row: 3;
+  grid-row: 4;
+  grid-column: 1;
+}
+
+#selectEmployee {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: 3ch;
+}
+
+#selectEmployeeLabel {
+  grid-row: 1;
   grid-column: 1;
 }
 
 #depositSubmit {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 2;
-}
-
-#employee {
-  display: none;
 }

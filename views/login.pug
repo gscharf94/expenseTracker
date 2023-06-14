@@ -1,0 +1,19 @@
+html
+  head
+    title Expenses - Fiber 1
+    // meta(name="viewport" content="width=device-width, initial-scale=0.1")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono")
+    link(rel="stylesheet" href="/stylesheets/login.css")
+
+body
+  div#formContainer
+    img(src="/images/logo.svg")#logo
+    input#usernameInput(type="text" name="username")
+    label(for="username")#usernameLabel Username
+    input#passwordInput(type="password" name="password")
+    label#passwordLabel(for="password") Password
+    button#submit(onclick="checkCredentials()") Login
+
+  script.
+    LOGIN_JSON="#{loginJSON}"
+  script(src="/scripts/login.js")

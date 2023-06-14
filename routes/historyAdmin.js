@@ -6,11 +6,10 @@ const {
 
 
 router.get('/:user', (req, res) => {
-  const usr = req.params.user[0].toUpperCase() + req.params.user.slice(1, );
-  const data = parseFile(usr);
-  res.render('history', {
+  const data = parseFile(req.params.user);
+  res.render('historyAdmin', {
     data: JSON.stringify(data),
-    user: usr,
+    user: req.params.user,
   });
 });
 

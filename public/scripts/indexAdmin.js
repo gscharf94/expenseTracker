@@ -1,17 +1,14 @@
 function resetInputs() {
-  let expenseValue = document.getElementById('expenseValue');
   let depositValue = document.getElementById('depositValue');
-  let fileInput = document.getElementById('uploadFile');
-  let expenseNotes = document.getElementById('expenseNotes');
   let depositNotes = document.getElementById('depositNotes');
-  let expenseDate = document.getElementById('expenseDate');
   let depositDate = document.getElementById('depositDate');
+  let employeeSelect = document.getElementById('selectEmployee');
 
   let inputs = [
-    expenseValue, depositValue, fileInput,
-    expenseNotes, depositNotes, expenseDate,
-    depositDate
-  ];
+    depositValue, depositNotes,
+    depositDate, employeeSelect,
+  ]
+
   for (const input of inputs) {
     input.value = "";
   }
@@ -95,14 +92,15 @@ function validateDepositInputs(e) {
   }
 }
 
+function colorHeaders() {
+
+}
+
 function init() {
   console.log('i love johanna');
   resetInputs();
-  let expenseSubmit = document.getElementById('expenseSubmit');
-  expenseSubmit.addEventListener('click', validateExpenseInputs);
-
-  let hiddenEmployee = document.getElementById('employee');
-  hiddenEmployee.value = user;
+  let depositSubmit = document.getElementById('depositSubmit');
+  depositSubmit.addEventListener('click', validateDepositInputs);
 }
 
 init();
