@@ -26,5 +26,5 @@ app.use("/historyAdmin", adminHistoryRouter);
 app.use("/main", indexRouter);
 
 app.listen(port, "0.0.0.0", () => {
-  console.log(`listening on port: http://10.0.0.234:${port}`);
+  console.log(`listening on port: http://burrowreport.com`);
 });
