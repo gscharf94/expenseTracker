@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function removeCommas(str) {
   return str.replace(/,/g, "");
@@ -10,26 +10,90 @@ function getFilePath(user) {
 
 function formatDateToDatabase(expenseDate) {
   let [year, month, day] = expenseDate.split("-");
-  return `${month}/${day}/${year.slice(-2,)}`;
+  return `${month}/${day}/${year.slice(-2)}`;
+}
+
+function getLastValue(username) {
+  let data = [...parseFile(username)];
+  let lastElement = data.pop();
+  return {
+    transactionType: lastElement[1],
+    value: lastElement[2],
+    date: lastElement[3],
+    notes: lastElement[4],
+    imageType: lastElement[5],
+  };
+}
+
+function checkDuplicateValue(val1, val2) {
+  console.log(`checking duplicate`);
+  console.log(`val1`);
+  console.log(val1);
+  console.log(`val2`);
+  console.log(val2);
+  if (val1.transactionType !== val2.transactionType) {
+    return false;
+  }
+  if (val1.value !== val2.value) {
+    return false;
+  }
+  if (val1.date !== val2.date) {
+    return false;
+  }
+  if (val1.notes !== val2.notes) {
+    return false;
+  }
+  if (val1.fileType !== val2.fileType) {
+    return false;
+  }
+
+  return true;
 }
 
 function addExpense(value, expenseDate, notes, user, imageType) {
   let id = getNextId(user);
-  let output = `${id}, expense, ${value}, ${formatDateToDatabase(expenseDate)}, ${removeCommas(notes)},${imageType},\n`;
+  let output = `${id}, expense, ${value}, ${formatDateToDatabase(
+    expenseDate
+  )}, ${removeCommas(notes)}, ${imageType},\n`;
+  let lastValue = getLastValue(user);
+  console.log(`output:`);
+  console.log(output);
+  console.log(`last file:`);
+  console.log(lastValue);
+  let equal = checkDuplicateValue(
+    {
+      transactionType: "expense",
+      value: Number(value),
+      date: formatDateToDatabase(expenseDate),
+      notes: removeCommas(notes),
+      fileType: imageType,
+    },
+    {
+      transactionType: lastValue.transactionType,
+      value: lastValue.value,
+      date: lastValue.date,
+      notes: lastValue.notes,
+      fileType: lastValue.imageType,
+    }
+  );
+  console.log(`equal?... ${equal}`);
   fs.appendFileSync(getFilePath(user), output);
 }
 
 function addDeposit(value, depositDate, notes, user) {
   let id = getNextId(user);
-  let output = `${id}, deposit, ${value}, ${formatDateToDatabase(depositDate)}, ${removeCommas(notes)},\n`;
+  let output = `${id}, deposit, ${value}, ${formatDateToDatabase(
+    depositDate
+  )}, ${removeCommas(notes)},\n`;
   fs.appendFileSync(getFilePath(user), output);
 }
 
 function parseFile(username) {
-  let text = fs.readFileSync(getFilePath(username), 'utf8');
+  let text = fs.readFileSync(getFilePath(username), "utf8");
   let data = [];
   for (const row of text.split("\n")) {
-    if (row.split(",")[0] == "id" || row == "") {} else {
+    if (row.split(",")[0] == "id" || row == "") {
+    } else {
       let dataRow = [];
       dataRow.push(Number(row.split(",")[0]));
       dataRow.push(row.split(",")[1].trim());
@@ -79,14 +143,13 @@ function formatCurrency(val) {
       return "$0.00";
     }
     positive = false;
-    dollars = dollars.slice(1, );
+    dollars = dollars.slice(1);
   } else {
     positive = true;
   }
   if (cents == "" || cents == undefined) {
     cents = "00";
   } else if (cents.length == 2) {
-
   } else if (cents.length > 2) {
     cents = cents.slice(0, 2);
   } else {
@@ -102,9 +165,9 @@ function formatCurrency(val) {
     c++;
   }
   if (dollarsTmp[0] == ",") {
-    dollarsTmp = dollarsTmp.slice(1, );
+    dollarsTmp = dollarsTmp.slice(1);
   }
-  return `${(positive) ? "" : "-"}$${dollarsTmp}.${cents}`;
+  return `${positive ? "" : "-"}$${dollarsTmp}.${cents}`;
 }
 
 module.exports = {
@@ -114,4 +177,4 @@ module.exports = {
   addDeposit,
   getSum,
   formatCurrency,
-}
+};
