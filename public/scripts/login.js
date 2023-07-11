@@ -46,8 +46,8 @@ function checkCredentials() {
   }
 
   if (correctCredentials) {
-    // window.location.replace(`http://burrowreport.com/main/${username}`);
-    window.location.replace(`http://10.0.0.239:3000/main/${username}`);
+    window.location.replace(`http://burrowreport.com/main/${username}`);
+    // window.location.replace(`http://10.0.0.239:3000/main/${username}`);
   } else {
     alert('incorrect login');
   }
