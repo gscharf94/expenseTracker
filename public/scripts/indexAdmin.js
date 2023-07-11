@@ -1,16 +1,33 @@
 function resetInputs() {
-  let depositValue = document.getElementById('depositValue');
-  let depositNotes = document.getElementById('depositNotes');
-  let depositDate = document.getElementById('depositDate');
-  let employeeSelect = document.getElementById('selectEmployee');
+  let depositValue = document.getElementById("depositValue");
+  let depositNotes = document.getElementById("depositNotes");
+  let depositDate = document.getElementById("depositDate");
+  let employeeSelect = document.getElementById("selectEmployee");
 
-  let inputs = [
-    depositValue, depositNotes,
-    depositDate, employeeSelect,
-  ]
+  let inputs = [depositValue, depositNotes, depositDate, employeeSelect];
 
   for (const input of inputs) {
     input.value = "";
+  }
+}
+
+function determineColor(text) {
+  if (text[0] == "-") {
+    return "red";
+  } else {
+    return "green";
+  }
+}
+
+function colorHeaders() {
+  let headers = document.querySelectorAll(".employeeBalanceHeader");
+  for (const header of headers) {
+    let color = determineColor(header.textContent.trim());
+    if (color == "red") {
+      header.style.color = "red";
+    } else {
+      header.style.color = "green";
+    }
   }
 }
 
@@ -63,44 +80,41 @@ function validateNotesInput(inputId) {
 }
 
 function validateExpenseInputs(e) {
-  if (!validateDollarInput('expenseValue')) {
+  if (!validateDollarInput("expenseValue")) {
     e.preventDefault();
-    alert('dollar value is incorrect');
+    alert("dollar value is incorrect");
   }
-  if (!validateDateInput('expenseDate')) {
+  if (!validateDateInput("expenseDate")) {
     e.preventDefault();
-    alert('no date input');
+    alert("no date input");
   }
-  if (!validateNotesInput('expenseNotes')) {
+  if (!validateNotesInput("expenseNotes")) {
     e.preventDefault();
-    alert('no notes input');
+    alert("no notes input");
   }
 }
 
 function validateDepositInputs(e) {
-  if (!validateDollarInput('depositValue')) {
+  if (!validateDollarInput("depositValue")) {
     e.preventDefault();
-    alert('dollar value is incorrect');
+    alert("dollar value is incorrect");
   }
-  if (!validateDateInput('depositDate')) {
+  if (!validateDateInput("depositDate")) {
     e.preventDefault();
-    alert('no date input');
+    alert("no date input");
   }
-  if (!validateNotesInput('depositNotes')) {
+  if (!validateNotesInput("depositNotes")) {
     e.preventDefault();
-    alert('no notes input');
+    alert("no notes input");
   }
-}
-
-function colorHeaders() {
-
 }
 
 function init() {
-  console.log('i love johanna');
+  console.log("i love johanna");
   resetInputs();
-  let depositSubmit = document.getElementById('depositSubmit');
-  depositSubmit.addEventListener('click', validateDepositInputs);
+  let depositSubmit = document.getElementById("depositSubmit");
+  depositSubmit.addEventListener("click", validateDepositInputs);
+  colorHeaders();
 }
 
 init();
