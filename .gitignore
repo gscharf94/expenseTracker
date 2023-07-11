@@ -3,3 +3,5 @@ upload/
 node_modules/
 log.csv
 public/images
+ThiagoLog.csv
+CesarLog.csv
