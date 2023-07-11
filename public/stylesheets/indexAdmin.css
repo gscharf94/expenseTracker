@@ -1,22 +1,29 @@
 html {
-  font-family: "Fira Mono";
-  background-color: lightgray;
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa;
 }
 
 button {
-  background-color: blue;
+  background-color: #1976d2;
   color: white;
   border: none;
-  width: 50%;
-  /*  margin: auto;*/
+  padding: 10px 20px;
   font-weight: bold;
-  font-size: 2.5ch;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-input {
-  /*  margin: auto;*/
+button:hover {
+  background-color: #1565c0;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 label {
@@ -31,7 +38,6 @@ label {
 
 .notesInput {
   font-size: 2ch;
-
 }
 
 .dollarInput {
@@ -79,8 +85,8 @@ label {
   padding-left: 10px;
 }
 
-#expenseContainer h2 {}
-
+#expenseContainer h2 {
+}
 
 #expenseContainer form {
   display: grid;
@@ -88,9 +94,11 @@ label {
   grid-row-gap: 10px;
 }
 
-#expenseContainer form input {}
+#expenseContainer form input {
+}
 
-#expenseContainer form label {}
+#expenseContainer form label {
+}
 
 #expenseValueLabel {
   grid-row: 1;
@@ -137,32 +145,39 @@ label {
 
 .balanceHeaderContainer {
   margin: auto;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 5px;
+  width: 70%;
+  margin-bottom: 10px;
 }
 
-.employeeNameHeader {
-  margin: auto;
-  text-align: center;
-}
-
+.employeeNameHeader,
 .employeeBalanceHeader {
   margin: auto;
   text-align: center;
+  color: #00264d;
 }
 
 .balanceHeaderContainer a {
   display: table;
   margin: auto;
-  font-size: 3ch;
-  color: blue;
+  font-size: 1.4rem;
+  color: #1976d2;
+  text-decoration: none;
+  margin-top: 4px;
 }
 
 #depositContainer {
   display: grid;
-  background-color: #7cd27c;
-  padding-left: 10px;
+  background-color: #c5eeb6;
+  padding: 20px;
   margin: auto;
-  width: 100%;
+  width: 70%;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 body {
@@ -202,7 +217,7 @@ select {
 #depositNotes {
   grid-row: 4;
   grid-column: 2;
-  width: 270px;
+  width: 250px;
 }
 
 #depositNotesLabel {
@@ -224,4 +239,10 @@ select {
 #depositSubmit {
   grid-row: 5;
   grid-column: 2;
+}
+
+@media (max-width: 768px) {
+  #depositContainer {
+    width: 85%;
+  }
 }
