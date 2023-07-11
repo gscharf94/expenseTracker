@@ -1,19 +1,42 @@
 function resetInputs() {
-  let expenseValue = document.getElementById('expenseValue');
-  let depositValue = document.getElementById('depositValue');
-  let fileInput = document.getElementById('uploadFile');
-  let expenseNotes = document.getElementById('expenseNotes');
-  let depositNotes = document.getElementById('depositNotes');
-  let expenseDate = document.getElementById('expenseDate');
-  let depositDate = document.getElementById('depositDate');
+  let expenseValue = document.getElementById("expenseValue");
+  let depositValue = document.getElementById("depositValue");
+  let fileInput = document.getElementById("uploadFile");
+  let expenseNotes = document.getElementById("expenseNotes");
+  let depositNotes = document.getElementById("depositNotes");
+  let expenseDate = document.getElementById("expenseDate");
+  let depositDate = document.getElementById("depositDate");
 
   let inputs = [
-    expenseValue, depositValue, fileInput,
-    expenseNotes, depositNotes, expenseDate,
-    depositDate
+    expenseValue,
+    depositValue,
+    fileInput,
+    expenseNotes,
+    depositNotes,
+    expenseDate,
+    depositDate,
   ];
   for (const input of inputs) {
     input.value = "";
+  }
+}
+
+function determineColor(elementId) {
+  let txt = document.getElementById(elementId).value.trim();
+  if (txt[0] == "-") {
+    return "red";
+  } else {
+    return "green";
+  }
+}
+
+function colorHeader() {
+  let element = document.getElementById("balance");
+  let val = element.textContent.trim();
+  if (val[0] == "-") {
+    element.style.color = "red";
+  } else {
+    element.style.color = "green";
   }
 }
 
@@ -66,43 +89,45 @@ function validateNotesInput(inputId) {
 }
 
 function validateExpenseInputs(e) {
-  if (!validateDollarInput('expenseValue')) {
+  if (!validateDollarInput("expenseValue")) {
     e.preventDefault();
-    alert('dollar value is incorrect');
+    alert("dollar value is incorrect");
   }
-  if (!validateDateInput('expenseDate')) {
+  if (!validateDateInput("expenseDate")) {
     e.preventDefault();
-    alert('no date input');
+    alert("no date input");
   }
-  if (!validateNotesInput('expenseNotes')) {
+  if (!validateNotesInput("expenseNotes")) {
     e.preventDefault();
-    alert('no notes input');
+    alert("no notes input");
   }
 }
 
 function validateDepositInputs(e) {
-  if (!validateDollarInput('depositValue')) {
+  if (!validateDollarInput("depositValue")) {
     e.preventDefault();
-    alert('dollar value is incorrect');
+    alert("dollar value is incorrect");
   }
-  if (!validateDateInput('depositDate')) {
+  if (!validateDateInput("depositDate")) {
     e.preventDefault();
-    alert('no date input');
+    alert("no date input");
   }
-  if (!validateNotesInput('depositNotes')) {
+  if (!validateNotesInput("depositNotes")) {
     e.preventDefault();
-    alert('no notes input');
+    alert("no notes input");
   }
 }
 
 function init() {
-  console.log('i love johanna');
+  console.log("i love johanna");
   resetInputs();
-  let expenseSubmit = document.getElementById('expenseSubmit');
-  expenseSubmit.addEventListener('click', validateExpenseInputs);
+  let expenseSubmit = document.getElementById("expenseSubmit");
+  expenseSubmit.addEventListener("click", validateExpenseInputs);
 
-  let hiddenEmployee = document.getElementById('employee');
+  let hiddenEmployee = document.getElementById("employee");
   hiddenEmployee.value = user;
+
+  colorHeader();
 }
 
 init();
