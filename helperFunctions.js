@@ -26,11 +26,6 @@ function getLastValue(username) {
 }
 
 function checkDuplicateValue(val1, val2) {
-  console.log(`checking duplicate`);
-  console.log(`val1`);
-  console.log(val1);
-  console.log(`val2`);
-  console.log(val2);
   if (val1.transactionType !== val2.transactionType) {
     return false;
   }
@@ -56,10 +51,6 @@ function addExpense(value, expenseDate, notes, user, imageType) {
     expenseDate
   )}, ${removeCommas(notes)}, ${imageType},\n`;
   let lastValue = getLastValue(user);
-  console.log(`output:`);
-  console.log(output);
-  console.log(`last file:`);
-  console.log(lastValue);
   let equal = checkDuplicateValue(
     {
       transactionType: "expense",
@@ -76,8 +67,12 @@ function addExpense(value, expenseDate, notes, user, imageType) {
       fileType: lastValue.imageType,
     }
   );
-  console.log(`equal?... ${equal}`);
-  fs.appendFileSync(getFilePath(user), output);
+  console.log("found duplicate... not saving");
+  if (equal) {
+    return;
+  } else {
+    fs.appendFileSync(getFilePath(user), output);
+  }
 }
 
 function addDeposit(value, depositDate, notes, user) {
