@@ -4,8 +4,8 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test.js"
+    "test": "node test.js",
+    "start": "nohup node test.js & ."
   },
   "author": "",
   "license": "ISC",
