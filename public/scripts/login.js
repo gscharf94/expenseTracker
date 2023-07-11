@@ -5,13 +5,13 @@ function parseJSON(txt) {
 const logins = parseJSON(LOGIN_JSON);
 
 function addEvents() {
-  const usernameInput = document.getElementById('usernameInput');
-  const passwordInput = document.getElementById('passwordInput');
+  const usernameInput = document.getElementById("usernameInput");
+  const passwordInput = document.getElementById("passwordInput");
 
   let inputs = [usernameInput, passwordInput];
 
   for (const input of inputs) {
-    input.addEventListener('keydown', (ev) => {
+    input.addEventListener("keydown", (ev) => {
       if (ev.key == "Enter") {
         checkCredentials();
       }
@@ -20,8 +20,8 @@ function addEvents() {
 }
 
 function checkCredentials() {
-  const usernameInput = document.getElementById('usernameInput');
-  const passwordInput = document.getElementById('passwordInput');
+  const usernameInput = document.getElementById("usernameInput");
+  const passwordInput = document.getElementById("passwordInput");
   const username = usernameInput.value;
   const password = passwordInput.value;
 
@@ -46,10 +46,10 @@ function checkCredentials() {
   }
 
   if (correctCredentials) {
-    window.location.replace(`http://burrowreport.com/main/${username}`);
-    // window.location.replace(`http://10.0.0.239:3000/main/${username}`);
+    // window.location.replace(`http://burrowreport.com/main/${username}`);
+    window.location.replace(`http://10.0.0.234:3000/main/${username}`);
   } else {
-    alert('incorrect login');
+    alert("incorrect login");
   }
 }
 
