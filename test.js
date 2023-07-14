@@ -1,4 +1,6 @@
 const express = require("express");
+const http = require("http");
+let reload = require("reload");
 const fileUpload = require("express-fileupload");
 const bodyParser = require("body-parser");
 const app = express();
@@ -25,6 +27,14 @@ app.use("/history", historyRouter);
 app.use("/historyAdmin", adminHistoryRouter);
 app.use("/main", indexRouter);
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`listening on port: http://10.0.0.234:${port}`);
+let server = http.createServer(app);
+
+reload(app).then(function (reloadReturned) {
+  server.listen(port, "0.0.0.0", () => {
+    console.log(`listening on port: http://10.0.0.234:${port}`);
+  });
 });
+
+// app.listen(port, "0.0.0.0", () => {
+//   console.log(`listening on port: http://10.0.0.234:${port}`);
+// });
