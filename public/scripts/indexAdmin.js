@@ -1,4 +1,20 @@
-alert("this should change....");
+let graphData = parseJSON(GRAPH_DATA);
+console.log(graphData);
+
+console.log(normalizeData(100, graphData["Cesar"]));
+console.log(normalizeData(100, graphData["Thiago"]));
+
+function parseJSON(txt) {
+  return JSON.parse(txt.replace(/&quot;/g, '"').replace(/\n/g, ""));
+}
+
+// canvas height right now is 100 pixels
+// so we're gonna make it 80
+function normalizeData(maxHeight, arr) {
+  return arr.map((val) => {
+    return val / maxHeight;
+  });
+}
 
 function resetInputs() {
   let depositValue = document.getElementById("depositValue");
