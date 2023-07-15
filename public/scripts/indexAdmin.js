@@ -1,18 +1,32 @@
 let graphData = parseJSON(GRAPH_DATA);
 console.log(graphData);
 
-console.log(normalizeData(100, graphData["Cesar"]));
-console.log(normalizeData(100, graphData["Thiago"]));
+console.log(
+  normalizeData(findAbsoluteMax(graphData["Cesar"]), graphData["Cesar"], 40)
+);
+console.log(
+  normalizeData(findAbsoluteMax(graphData["Thiago"]), graphData["Thiago"], 40)
+);
 
 function parseJSON(txt) {
   return JSON.parse(txt.replace(/&quot;/g, '"').replace(/\n/g, ""));
 }
 
+function findAbsoluteMax(arr) {
+  return arr.reduce((val, next) => {
+    if (Math.abs(next) > Math.abs(val)) {
+      return next;
+    } else {
+      return val;
+    }
+  });
+}
+
 // canvas height right now is 100 pixels
 // so we're gonna make it 80
-function normalizeData(maxHeight, arr) {
+function normalizeData(absoluteMax, arr, canvasHeight) {
   return arr.map((val) => {
-    return val / maxHeight;
+    return (val / absoluteMax) * canvasHeight;
   });
 }
 
