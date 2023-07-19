@@ -251,9 +251,11 @@ select {
 }
 
 canvas {
-  background-color: black;
+  background-color: #f0f0f0;
   grid-row: 4;
   grid-column: 1;
   margin: auto;
   margin-top: 5px;
+  border-radius: 20px;
+  border: 1px solid black;
 }

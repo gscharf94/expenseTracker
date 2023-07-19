@@ -11,7 +11,7 @@ html
           h1.employeeNameHeader #{user}
           h1.employeeBalanceHeader #{balance}
           a(href=`../../historyAdmin/${user}`) View History
-          canvas(width="400" height="100").employeeCanvas
+          canvas(id=`${user}Canvas`).employeeCanvas
         
     div#depositContainer
       h2 Submit Deposit
