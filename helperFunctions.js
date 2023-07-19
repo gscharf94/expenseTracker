@@ -165,6 +165,22 @@ function formatCurrency(val) {
   return `${positive ? "" : "-"}$${dollarsTmp}.${cents}`;
 }
 
+function getGraphData(user) {
+  let data = parseFile(user);
+  let balance = 0;
+  let points = [balance];
+  for (const row of data) {
+    console.log(row);
+    if (row[1] == "expense") {
+      balance -= row[2];
+    } else {
+      balance += row[2];
+    }
+    points.push(Math.floor(balance));
+  }
+  return points;
+}
+
 module.exports = {
   getNextId,
   parseFile,
@@ -172,4 +188,5 @@ module.exports = {
   addDeposit,
   getSum,
   formatCurrency,
+  getGraphData,
 };

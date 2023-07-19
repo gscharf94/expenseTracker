@@ -11,6 +11,7 @@ html
           h1.employeeNameHeader #{user}
           h1.employeeBalanceHeader #{balance}
           a(href=`../../historyAdmin/${user}`) View History
+          canvas(id=`${user}Canvas`).employeeCanvas
         
     div#depositContainer
       h2 Submit Deposit
@@ -27,4 +28,8 @@ html
         label(for="depositNotes")#depositNotesLabel Notes
         button(type="submit")#depositSubmit Submit
 
+  script.
+    GRAPH_DATA="#{graphData}"
   script(src="/scripts/indexAdmin.js")
+  script(src="/reload/reload.js")
+
